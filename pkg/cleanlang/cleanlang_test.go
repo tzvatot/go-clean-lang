@@ -3,10 +3,7 @@ package cleanlang
 import "testing"
 
 func TestValidator(t *testing.T) {
-	validator, err := NewValidator()
-	if err != nil {
-		t.Errorf("failed to create validator")
-	}
+	validator := NewValidator()
 	word := "abc"
 	clean := validator.IsClean(word)
 	if clean {
