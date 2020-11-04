@@ -18,5 +18,5 @@ func NewValidator() Validator {
 
 func (v *ValidatorImpl) IsClean(word string) bool {
 	_, found := v.badWords[word]
-	return found
+	return !found
 }

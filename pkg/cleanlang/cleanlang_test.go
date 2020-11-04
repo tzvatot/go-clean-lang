@@ -4,9 +4,9 @@ import "testing"
 
 func TestValidator(t *testing.T) {
 	validator := NewValidator()
-	word := "abc"
+	word := "l2o7"
 	clean := validator.IsClean(word)
-	if clean {
+	if !clean {
 		t.Errorf("expected '%s' to be clean", word)
 	}
 	word = "@ss"
